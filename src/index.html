@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .button {
+        background-color: royalblue;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 16px;
+    }
+
+    table {
+        width: 60%;
+        margin: 20px auto;
+        border-collapse: collapse;
+    }
+    table, tr{
+        border: 1px solid gray;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: lightgray;
+    }
+
+    .header-container, .input-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        margin: 10px auto;
+    }
+    .header-container {
+        margin-top: 100px;
+    }
+    h1 {
+        margin: 0;
+    }
+    button {
+        margin-left: 10px;
+        padding: 10px;
+        max-width: 200px;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    .clickable-name {
+        color: royalblue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .action-btn {
+        padding: 5px 10px;
+        background-color: royalblue;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+    .delete-btn {
+        background-color: crimson;
+    }
+    .action-cell {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+
+</style>
+<head>
+    <title>User Data</title>
+</head>
+<body>
+<div>
+    <div class="header-container">
+        <h1 class="headline-large">Users</h1>
+        <button class="button" id="addUser" onclick="addNewUser()"><i class="fa fa-plus"></i> Add User</button>
+    </div>
+    <div class="input-container">
+        <input type="text" id="searchUser" placeholder="Search user">
+    </div>
+
+    <div class="table-container">
+    <table id="userTable">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Website</th>
+            <th>Company</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </div>
+</div>
+</body>
+
+<script src="./loadUserData.js" defer></script>
+<script src="fillTableWithUserData.js" defer></script>
+<script src="./searchTable.js" defer></script>
+<script src="./main.js" defer></script>
+
+</html>
